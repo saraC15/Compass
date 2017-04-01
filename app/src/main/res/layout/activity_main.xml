@@ -6,27 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.example.saraegli.myfirstapp.MainActivity">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:text="@string/button_send"
-        app:layout_constraintLeft_toRightOf="@+id/editText2"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="openCompass"
+        android:text="@string/button_compass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="14dp"
-        app:layout_constraintHorizontal_bias="0.508" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.498" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="109dp"
+        android:onClick="openValues"
+        android:text="@string/button_values"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
