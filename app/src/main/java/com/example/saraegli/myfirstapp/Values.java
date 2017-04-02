@@ -16,22 +16,17 @@ import android.widget.TextView;
 public class Values extends AppCompatActivity implements SensorEventListener {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
-    private TextView x,y, z;
-
-    public Values() {
-        Log.d("Konstruktor till Values",".");
-    }
+    private TextView x,y,z;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("OnCreate Values",".");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_values);
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        x = (TextView) findViewById(R.id.textView5);
-        y = (TextView) findViewById(R.id.textView7);
-        z = (TextView) findViewById(R.id.textView9);
+        x = (TextView) findViewById(R.id.showx);
+        y = (TextView) findViewById(R.id.showy);
+        z = (TextView) findViewById(R.id.showz);
     }
 
     protected void onResume() {
