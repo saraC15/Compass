@@ -2,6 +2,9 @@
     <string name="app_name">Sara\'s Compass App</string>
     <string name="button_values">Sensor values</string>
     <string name="button_compass">Compass</string>
-    <string name="title_values">Sensor values</string>
+    <string name="title_values">Accelerator values</string>
     <string name="title_compass">Compass</string>
+    <string name="accelerator_x">x-value</string>
+    <string name="accelerator_y">y-value</string>
+    <string name="accelerator_z">z-value</string>
 </resources>
