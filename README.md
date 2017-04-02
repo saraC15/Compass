@@ -22,4 +22,4 @@ Använde svar från <a href="http://stackoverflow.com/questions/5402637/displays
 
 Använde koden från <a href="http://www.techrepublic.com/article/pro-tip-create-your-own-magnetic-compass-using-androids-internal-sensors/">Pro tip: Create your own magnetic compass using Android's internal sensors</a> för att få kompassen att rotera efter mobilens riktning (genom att man vet accelerometerns värde) och norr (genom att man vet magnetometerns värde).
 
-Jag lade även till ett lågpassfilter från <a href="https://www.built.io/blog/applying-low-pass-filter-to-android-sensor-s-readings">Applying Low Pass Filter to Android Sensor's Readings</a> för att filtrera bort störningar.
+Jag lade även till ett lågpassfilter från <a href="https://www.built.io/blog/applying-low-pass-filter-to-android-sensor-s-readings">Applying Low Pass Filter to Android Sensor's Readings</a> för att filtrera bort störningar och ändrade i koden så att denna metod användes för att lägga in de nya inputvärdena istället för att bara kopiera över dem direkt som innan.
