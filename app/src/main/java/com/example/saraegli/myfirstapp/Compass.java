@@ -50,10 +50,12 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor == mAccelerometer) {
-            System.arraycopy(event.values, 0, mLastAccelerometer, 0, event.values.length);
+            //System.arraycopy(event.values, 0, mLastAccelerometer, 0, event.values.length);
+            lowPass(event.values, mLastAccelerometer);
             mLastAccelerometerSet = true;
         } else if (event.sensor == mMagnetometer) {
-            System.arraycopy(event.values, 0, mLastMagnetometer, 0, event.values.length);
+            //System.arraycopy(event.values, 0, mLastMagnetometer, 0, event.values.length);
+            lowPass(event.values, mLastMagnetometer);
             mLastMagnetometerSet = true;
         }
         if (mLastAccelerometerSet && mLastMagnetometerSet) {
@@ -80,5 +82,13 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         // TODO Auto-generated method stub
+    }
+
+    protected float[] lowPass( float[] input, float[] output ) {
+        if ( output == null ) return input;
+        for ( int i=0; i<input.length; i++ ) {
+            output[i] = output[i] + ALPHA * (input[i] - output[i]);
+        }
+        return output;
     }
 }
