@@ -1,4 +1,4 @@
-# MyFirstApp
+# Compass
 En enkel kompassapp gjord i kursen Avancerad interaktionsdesign.
 
 <h1>Tillvägagångssätt</h1>
